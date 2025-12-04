@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notifikasi Canva Pro</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #FFFFFF;
+            overflow-y: auto;
+            padding: 20px;
+            text-align: center;
+        }
+        .top-image-container, .image-container {
+            width: 100%;
+            max-width: 90%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            margin-bottom: 15px;
+        }
+        .top-image-container img, .image-container img {
+            max-width: 100%;
+            height: auto;
+            opacity: 0;
+            position: absolute;
+            transition: opacity 0.5s ease-in-out;
+            border-radius: 20px;
+        }
+        .top-image-container img.active, .image-container img.active {
+            opacity: 1;
+            position: relative;
+        }
+        .notification-text {
+            margin-bottom: 15px;
+            font-size: 16px;
+            color: #333;
+        }
+        .button-container {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+        .get-button, .share-button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .get-button {
+            background: black;
+            color: white;
+        }
+        .share-button {
+            display: none;
+            background: #21BD5B;
+            color: white;
+        }
+        .image-container {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="top-image-container">
+        <img src="https://firebasestorage.googleapis.com/v0/b/web-zepeto-me.appspot.com/o/CANVA%2FIMAGES%2FLandscape%2Funnamed%20(10).png?alt=media&token=7a998bae-f7b2-4563-b3fb-99e458dfa372" class="active">
+        <img src="https://firebasestorage.googleapis.com/v0/b/web-zepeto-me.appspot.com/o/CANVA%2FIMAGES%2FLandscape%2Funnamed%20(11).png?alt=media&token=4ebe0198-6244-4f6e-a3d3-141a2e8af34f">
+        <img src="https://firebasestorage.googleapis.com/v0/b/web-zepeto-me.appspot.com/o/CANVA%2FIMAGES%2FLandscape%2Funnamed%20(12).png?alt=media&token=db518083-015a-47b9-868e-09e89853b9a1">
+        <img src="https://firebasestorage.googleapis.com/v0/b/web-zepeto-me.appspot.com/o/CANVA%2FIMAGES%2FLandscape%2Funnamed%20(13).png?alt=media&token=a4a50d0b-c24c-4285-94ff-7cf7c5ca164f">
+        <img src="https://firebasestorage.googleapis.com/v0/b/web-zepeto-me.appspot.com/o/CANVA%2FIMAGES%2FLandscape%2Funnamed%20(14).png?alt=media&token=980f3cbb-8fb3-4088-a668-28e0012280e9">
+        <img src="https://firebasestorage.googleapis.com/v0/b/web-zepeto-me.appspot.com/o/CANVA%2FIMAGES%2FLandscape%2Funnamed%20(15).png?alt=media&token=727a5ccd-f2ec-49ca-85d1-64d2bb1b22a4">
+        <img src="https://firebasestorage.googleapis.com/v0/b/web-zepeto-me.appspot.com/o/CANVA%2FIMAGES%2FLandscape%2Funnamed%20(8).png?alt=media&token=30aa24c9-1fc8-48ab-aea0-a1cfee1996bf">
+        <img src="https://firebasestorage.googleapis.com/v0/b/web-zepeto-me.appspot.com/o/CANVA%2FIMAGES%2FLandscape%2Funnamed%20(9).png?alt=media&token=d61f5de9-5523-478c-ada9-363f87370799">
+    </div>
+    <p class="notification-text">Ambil Canva Pro Desaigner secara Gratis<br>
+    Melalui proses verifikasi, share di story dengan tekan tombol “Dapatkan” di bawah dan Canva Pro langsung aktif di akun Kamu tanpa biaya 100%.</p>
+    <button class="get-button" onclick="changeButton()">DAPATKAN</button>
+    <div class="button-container" style="display: none;">
+        <button class="get-button ambil" onclick="window.open('https://www.canva.com/brand/join?token=wu_daB1fR5bdG2tYq0bOsw&referrer=team-invite', '_blank')">AMBIL SEKARANG</button>
+        <button class="share-button" onclick="window.open('https://api.whatsapp.com/send?text=canva%20pro%20gratis.%20gak%20bayar%20sama%20sekali,%20aktifin%20disini%20:%20lynk.id/buycanvapro', '_blank')">SHARE</button>
+    </div>
+    <div class="image-container">
+        <img src="https://firebasestorage.googleapis.com/v0/b/web-zepeto-me.appspot.com/o/CANVA%2FIMAGES%2Funnamed%20(7).png?alt=media&token=efecbe32-00b8-4bad-b904-d924b7672464" class="active">
+            <img src="https://firebasestorage.googleapis.com/v0/b/web-zepeto-me.appspot.com/o/CANVA%2FIMAGES%2Funnamed.png?alt=media&token=d7568cb6-0ac5-4813-8eb9-d83f020c2803">
+            <img src="https://firebasestorage.googleapis.com/v0/b/web-zepeto-me.appspot.com/o/CANVA%2FIMAGES%2Funnamed%20(6).png?alt=media&token=56583106-dccb-4a45-b8a9-23b0ceff12fb">
+            <img src="https://firebasestorage.googleapis.com/v0/b/web-zepeto-me.appspot.com/o/CANVA%2FIMAGES%2Funnamed%20(5).png?alt=media&token=393be2c6-02e9-4fa2-b7c6-f0188555d261">
+            <img src="https://firebasestorage.googleapis.com/v0/b/web-zepeto-me.appspot.com/o/CANVA%2FIMAGES%2Funnamed%20(4).png?alt=media&token=da10e7b1-6a10-463f-b879-928ca2465c45">
+            <img src="https://firebasestorage.googleapis.com/v0/b/web-zepeto-me.appspot.com/o/CANVA%2FIMAGES%2Funnamed%20(3).png?alt=media&token=080dfb6c-2f20-4c58-a02d-848eba3eaf90">
+            <img src="https://firebasestorage.googleapis.com/v0/b/web-zepeto-me.appspot.com/o/CANVA%2FIMAGES%2Funnamed%20(2).png?alt=media&token=d13cf1bd-935a-4722-9125-1d0a82288957">
+    </div>
+    <script>
+        function startSlideshow(containerSelector, interval) {
+            const images = document.querySelectorAll(containerSelector + ' img');
+            let currentIndex = 0;
+            function changeImage() {
+                images.forEach(img => img.classList.remove('active'));
+                images[currentIndex].classList.add('active');
+                currentIndex = (currentIndex + 1) % images.length;
+            }
+            setInterval(changeImage, interval);
+        }
+        startSlideshow('.top-image-container', 2000);
+        startSlideshow('.image-container', 2000);
+        
+        function changeButton() {
+            window.open('https://api.whatsapp.com/send?text=canva%20pro%20gratis.%20gak%20bayar%20sama%20sekali,%20aktifin%20disini%20:%20lynk.id/buycanvapro', '_blank');
+            
+            document.querySelector('.get-button').style.display = 'none';
+            
+            let buttonContainer = document.querySelector('.button-container');
+            buttonContainer.style.display = 'flex';
+            
+            let ambilButton = document.querySelector('.get-button.ambil');
+            ambilButton.innerText = 'AMBIL SEKARANG';
+            ambilButton.style.background = 'blue';
+            ambilButton.style.color = 'white';
+            
+            let shareButton = document.querySelector('.share-button');
+            shareButton.style.display = 'inline-block';
+            
+            let text = document.querySelector('.notification-text');
+            text.innerHTML = '<i style="color: #000;">👑 Selamat, Canva Pro sudah kamu peroleh. Verifikasi share dan jangan hapus dalam 24 jam untuk aktivasi lebih lama. Setelah itu, ambil sekarang Canva Pro dibawah :</i>';
+        }
+    </script>
+</body>
+</html>
